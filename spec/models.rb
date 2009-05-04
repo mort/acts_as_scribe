@@ -18,3 +18,7 @@ class User < ActiveRecord::Base
   has_many :groups, :through => :memberships
 end
 
+class Activity < ActiveRecord::Base
+  include ScribeActivity
+end
+
