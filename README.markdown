@@ -8,13 +8,13 @@ A simple plugin that allows to keep history records of the users activities. Com
 Changes in this fork
 --------------------
 
-The model 'Activity' is now defined as a module called 'ScribeActivity' so, know, you can define a model in your app, for example 'Activiy' and include the module like this:
+The model 'Activity' is now defined as a module called 'ScribeActivity' so, know, you can define a model in your app, for example 'Activity' and include the module like this:
 
-class Activiy < ActiveRecord::Base 
-	include ScribeActivity
-end
+	class Activity < ActiveRecord::Base 
+    	include ScribeActivity
+	end
 
-and then you can complete your model with some actions, finders, etc ...
+so you can complete your model with some actions, finders, etc ...
 
 
 Resources
