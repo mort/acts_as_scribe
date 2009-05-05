@@ -5,6 +5,18 @@ A simple plugin that allows to keep history records of the users activities. Com
 > Scribe (From Wikipedia, the free encyclopedia):
 "A scribe was traditionally a person who could read and write. This usually indicated secretarial and administrative duties such as dictation and keeping business, judicial, and history records for kings, nobles, temples, and cities."
 
+Changes in this fork
+--------------------
+
+The model 'Activity' is now defined as a module called 'ScribeActivity' so, know, you can define a model in your app, for example 'Activiy' and include the module like this:
+
+class Activiy < ActiveRecord::Base 
+	include ScribeActivity
+end
+
+and then you can complete your model with some actions, finders, etc ...
+
+
 Resources
 =========
 
