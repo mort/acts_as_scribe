@@ -2,8 +2,9 @@ module ScribeActivity
   def self.included(base)
     base.extend ScribeActivityClassMethods
     base.class_eval do
-      named_scope :by_user, lambda { |users|
-         { :conditions => { :user_id => users}}
+      named_scope :by_user, lambda { |*args|
+       args[1] ||= {}
+       {:conditions => { :user_id => args[0]}}.merge(args[1])
       }
 
       named_scope :by_action, lambda { |action|
@@ -24,6 +25,7 @@ module ScribeActivity
       validates_presence_of :user_id
     end
   end
+
 end
   
   
